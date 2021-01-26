@@ -69,24 +69,24 @@ const Work = (props) => {
         subtitle='A selection of projects, demos &amp;&nbsp;clients.'
       />
       <div className='content' id='content'>
-        <div className='hr' />
-        <h3 className='h3'>Interface Demos</h3>
-        <CardList cards={getDemoList()} />
         {/*<div className='hr' />
-        <h3 className='h3'>Selected Projects</h3>
-        {renderProjectList()}*/}
+        <h3 className='h3'>Case Studies</h3>
+      {renderProjectList()}*/}
+        <div className='hr' />
+        <h3 className='h3'>UI Experiments</h3>
+        <CardList cards={getDemoList()} />
         <div className='content__split'>
+          <AnimatedWaypoint className='content__split__column'>
+            <div className='hr' />
+            <h3 className='h3'>Open source projects</h3>
+            <OpenSourceList items={OPEN_SOURCE} />
+          </AnimatedWaypoint>
           <AnimatedWaypoint className='content__split__column'>
             <div className='hr' />
             <h3 className='h3 client__list__header'>
               Companies I've worked with
             </h3>
             <TagList tags={CLIENTS} />
-          </AnimatedWaypoint>
-          <AnimatedWaypoint className='content__split__column'>
-            <div className='hr' />
-            <h3 className='h3'>Open source projects</h3>
-            <OpenSourceList items={OPEN_SOURCE} />
           </AnimatedWaypoint>
         </div>
       </div>

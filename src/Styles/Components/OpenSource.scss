@@ -14,10 +14,6 @@
       flex: 1 1 50%;
     }
 
-    &:not(:last-of-type) {
-      border-bottom: 2px solid $tertiary;
-    }
-
     .open-source__header {
       flex: 0 0 100%;
 

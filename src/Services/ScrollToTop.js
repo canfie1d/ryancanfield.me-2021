@@ -9,12 +9,8 @@ const ScrollToTop = (props) => {
 
   useLayoutEffect(() => {
     if (!prevLocation || location.pathname !== prevLocation.pathname) {
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-      }, 500);
+      window.scrollTo(0, 0);
     }
-
-    return () => clearTimeout();
   }, [location]); // eslint-disable-line
 
   return null;
