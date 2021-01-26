@@ -1,0 +1,26 @@
+.footer {
+  background: $primary-dark;
+  padding: rem(20);
+
+  @include min-screen($media-small) {
+    padding: rem(20, 40);
+  }
+
+  @include min-screen($media-medium) {
+    padding: rem(20, 60);
+  }
+
+  .a {
+    @include bodyFont($off-white);
+    font-size: rem(12);
+
+    &:hover,
+    &:focus {
+      outline: 1px solid $off-white;
+    }
+  }
+  span {
+    @include bodyFont($off-white);
+    font-size: rem(12);
+  }
+}

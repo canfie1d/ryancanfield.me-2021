@@ -1,0 +1,26 @@
+////////////////////////
+//      REM CALC      //
+////////////////////////
+// REM BASE (font-size on html element)
+$rem-base: 16;
+
+@function rem($pxValues...) {
+  $result: ();
+
+  @each $pxValue in $pxValues {
+    $result: append($result, $pxValue/$rem-base + rem, space);
+	}
+
+  @return $result;
+}
+
+////////////////////////
+//     COLOR MATH     //
+////////////////////////
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

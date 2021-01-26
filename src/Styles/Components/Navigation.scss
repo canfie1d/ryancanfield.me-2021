@@ -1,0 +1,71 @@
+.nav {
+  z-index: 1;
+
+  @include max-screen($media-small) {
+    .nav__list {
+      display: flex;
+      justify-content: space-around;
+      padding: rem(10);
+      background: $primary-dark;
+    }
+
+    .nav__item {
+      flex: 0 0 auto;
+      display: inline;
+
+      &:not(:last-of-type) {
+        margin-right: rem(10);
+      }
+    }
+  }
+
+  .nav__link {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    padding: rem(15);
+    color: $off-white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    cursor: url('/Assets/Images/pointer.png') 2 2, pointer;
+
+    &.nav__link--active {
+      border: 1px solid $off-white;
+
+      &:hover,
+      &:focus {
+        border-color: shade($off-white, 50%);
+      }
+    }
+
+    .nav__link__title {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+      transform: translate(0, -50%);
+      @include bodyFontBold();
+      padding-right: rem(20);
+    }
+
+    &:hover,
+    &:focus {
+      outline: 1px solid $off-white;
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      .nav__link__title {
+        transition: transform 200ms ease-out;
+        transform: translate(-100%, -50%);
+      }
+    }
+  }
+
+  @include min-screen($media-small) {
+    .nav__item:not(:last-of-type) {
+      margin-left: 0;
+      margin-bottom: rem(10);
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.demo__link {
+  @extend .card__link;
+  white-space: pre-wrap;
+
+  .demo__link__column {
+    position: relative;
+
+    .h3 {
+      @include displayFont();
+      margin-bottom: 0;
+    }
+
+    &:first-of-type {
+      padding: rem(10);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      @include min-screen($media-small) {
+        padding: rem(20);
+      }
+    }
+  }
+
+  .demo__image__wrapper {
+    .demo__image {
+      width: 100%;
+    }
+  }
+
+  .demo__heart-container {
+    display: flex;
+
+    .icon {
+      padding-right: rem(5);
+    }
+
+    .demo__heart__quantity {
+      @include bodyFont($secondary);
+    }
+  }
+}

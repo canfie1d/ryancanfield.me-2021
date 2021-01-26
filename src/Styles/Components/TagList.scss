@@ -1,0 +1,38 @@
+.tag__list {
+
+  .tag__item {
+    position: relative;
+    display: inline-block;
+    background: $primary;
+    margin-bottom: rem(10);
+    padding: rem(10);
+    @include bodyFont($white);
+    text-shadow: 0 0 0 $white;
+    font-size: rem(12);
+    text-transform: uppercase;
+
+    &:not(:last-of-type) {
+      margin-right: rem(10);
+    }
+
+    &.tag__item--hasLink {
+      padding: 0;
+    }
+
+    @include min-screen($media-small) {
+      padding: rem(10, 30);
+    }
+  }
+
+  .tag__link {
+    display: block;
+    padding: rem(10);
+    @include bodyFont($white);
+    text-shadow: 0 0 0 $white;
+    text-decoration: none;
+
+    @include min-screen($media-small) {
+      padding: rem(10, 30);
+    }
+  }
+}

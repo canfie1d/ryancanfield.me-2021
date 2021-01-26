@@ -1,0 +1,60 @@
+////////////////////////
+//      Flexbox       //
+////////////////////////
+@mixin flexContainer($centerContent:false, $wrapContent:true, $inlineFlex:false) {
+  display: flex;
+  flex-wrap: nowrap;
+
+  @if $inlineFlex == true {
+    display: inline-flex;
+  }
+
+  @if $wrapContent == true {
+    flex-wrap: wrap;
+  }
+
+  @if $centerContent == true {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+
+@mixin flexItem($flexGrow:1, $flexShrink:0, $flexBasis:auto, $flexSelf:auto) {
+  flex: $flexGrow $flexShrink $flexBasis;
+  align-self: $flexSelf;
+}
+
+////////////////////////
+//     LINE CLAMP     //
+////////////////////////
+@mixin lineClamp($lines: 2, $lineHeight: 1.2) {
+  position: relative;
+  height: $lineHeight * $lines em;
+  overflow: hidden;
+  line-height: $lineHeight;
+
+  &::after {
+    content: "";
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: $lineHeight em;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 80%);
+  }
+
+  /* Now add in code for the browsers that support -webkit-line-clamp and overwrite the non-supportive stuff */
+  @supports (-webkit-line-clamp: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+
+    &:after {
+      display: none;
+    }
+  }
+}

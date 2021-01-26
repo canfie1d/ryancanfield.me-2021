@@ -1,0 +1,79 @@
+////////////////////////////////////////
+//      Font-Family Definitions       //
+////////////////////////////////////////
+$helvetica: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+$work: 'Work Sans', $helvetica;
+$work-bold: 'Work Sans Bold', $helvetica;
+
+$palatino: 'Palatino', Garamond, 'Bookman', 'Avant Garde';
+$playfair: 'Playfair', $palatino;
+$playfair-bold: 'Playfair Bold', $palatino;
+
+///////////////////////////////
+//       Font Imports        //
+///////////////////////////////
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Work Sans'),
+    url('./../../Assets/Fonts/worksans-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Work Sans Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Work Sans Bold'),
+    url('./../../Assets/Fonts/worksans-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Playfair';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Playfair'),
+    url('./../../Assets/Fonts/playfairdisplay-regular-webfont.woff')
+      format('woff');
+}
+
+@font-face {
+  font-family: 'Playfair Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: local('Playfair Bold'),
+    url('./../../Assets/Fonts/playfairdisplay-bold-webfont.woff') format('woff');
+}
+
+///////////////////////////////
+//      Font Variables       //
+///////////////////////////////
+$display-font: $playfair;
+$display-font--bold: $playfair-bold;
+$body-font: $work;
+$body-font--bold: $work-bold;
+
+////////////////////////////
+//      Font Mixins       //
+////////////////////////////
+@mixin displayFontBold($color: $display-color) {
+  font-family: $display-font--bold;
+  color: $color;
+}
+
+@mixin displayFont($color: $display-color) {
+  font-family: $display-font;
+  color: $color;
+}
+
+@mixin bodyFont($color: $body-color) {
+  font-family: $body-font;
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin bodyFontBold($color: $body-color) {
+  font-family: $body-font--bold;
+  font-weight: 400;
+  color: $color;
+}

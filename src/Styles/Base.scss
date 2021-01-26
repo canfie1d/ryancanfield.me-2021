@@ -1,0 +1,106 @@
+html {
+  font-size: $rem-base;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  cursor: default;
+  cursor: url('/Assets/Images/cursor.png') 2 2, default;
+  background: $primary-dark;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  margin-left: -1px;
+}
+
+.hr {
+  width: rem(60);
+  height: 2px;
+  background: $tertiary;
+  margin-top: rem(60);
+  margin-bottom: rem(20);
+
+  &.hr--full {
+    width: 100%;
+    margin: rem(20, 0, 40);
+  }
+}
+
+@keyframes aos {
+  0% {
+    opacity: 0.01;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.waypoint {
+  opacity: 0;
+
+  &.waypoint--inView {
+    animation: 500ms aos ease;
+    animation-fill-mode: forwards;
+
+    &:nth-of-type(even) {
+      animation: 500ms aos ease 300ms;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+.fade {
+  &.fade-enter {
+    opacity: 0;
+  }
+
+  &.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in 500ms;
+  }
+
+  &.fade-exit {
+    opacity: 1;
+  }
+
+  &.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+  }
+}

@@ -1,0 +1,81 @@
+.h1 {
+  @include displayFontBold();
+  line-height: 1.2;
+  font-size: rem(28);
+  color: $off-white;
+
+  @include min-screen($media-small) {
+    font-size: rem(42);
+  }
+
+  @include min-screen($media-medium) {
+    font-size: rem(56);
+  }
+}
+
+.h2 {
+  @include displayFont();
+  font-size: rem(24);
+  line-height: 1.2;
+  color: $off-white;
+
+  @include min-screen($media-small) {
+    font-size: rem(40);
+  }
+
+  @include min-screen($media-medium) {
+    font-size: rem(52);
+  }
+}
+
+.h3 {
+  @include displayFontBold();
+  font-size: rem(20);
+  line-height: 1.2;
+  margin-bottom: rem(20);
+}
+
+.h4 {
+  @include bodyFontBold();
+  font-size: rem(16);
+  line-height: 1.2;
+  margin-bottom: rem(20);
+}
+
+.p {
+  @include bodyFont();
+  font-size: rem(18);
+  max-width: rem(700);
+  line-height: 1.5;
+
+  &:not(:last-child) {
+    margin-bottom: rem(60);
+  }
+}
+
+.a {
+  color: $secondary;
+  text-decoration-skip-ink: auto;
+  white-space: nowrap;
+  cursor: pointer;
+  cursor: url('/Assets/Images/pointer.png') 2 2, pointer;
+
+  &:focus {
+    outline: 1px solid $primary;
+    outline-offset: 4px;
+  }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.p,
+.a {
+  &::selection {
+    background: $secondary;
+  }
+  &::-moz-selection {
+    background: $secondary;
+  }
+}

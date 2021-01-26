@@ -1,0 +1,69 @@
+.contact-card {
+  margin: rem(60) auto;
+  padding: rem(60);
+
+  .h3 {
+    @include displayFont();
+    max-width: rem(700);
+    margin: 0 auto rem(60);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .contact-card__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: rem(700);
+    margin: auto;
+
+    .contact-card__item {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: center;
+      margin-bottom: rem(60);
+      transform: scale(1);
+      transition: transform 200ms ease-out;
+
+      &:hover {
+        transform: scale(1.1);
+
+      }
+
+      .button {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @include bodyFontBold();
+        background: $secondary;
+        text-decoration: none;
+        box-shadow: 2px 2px 4px rgba($black, .2);
+        padding: rem(20);
+        text-transform: uppercase;
+        color: $white;
+        transition: box-shadow 200ms ease-out,
+                    background 200ms ease-out;
+
+        &:hover {
+          outline: none;
+          box-shadow: 2px 2px 6px rgba($black, .2);
+          background: shade($secondary, 10%);
+        }
+
+        @include min-screen($media-small) {
+          padding: rem(20, 40);
+        }
+      }
+
+      &.contact-card__item__email {
+        flex: 0 0 100%;
+
+        .icon {
+          margin-right: rem(10);
+        }
+
+      }
+    }
+  }
+
+}
