@@ -1,0 +1,45 @@
+.recommendation {
+  width: 100%;
+  background: $tertiary;
+  height: 310px;
+  padding: rem(20);
+
+  &.recommendation--auto {
+    height: auto;
+  }
+
+  .recommendation__header {
+    @include flexContainer(true, true);
+
+    .recommendation__header-column {
+      @include flexItem();
+
+      & + .recommendation__header-column {
+        @include flexItem(0);
+      }
+    }
+  }
+
+  .h3 {
+    color: $white;
+    font-size: rem(30);
+    margin: 0;
+  }
+
+  .recommendation__content {
+    margin: auto;
+    max-width: 700px;
+  }
+
+  .p {
+    margin-bottom: rem(10);
+
+    &.p--small {
+      font-size: rem(16);
+    }
+
+    &.p--clamped {
+      @include lineClamp(3, 1.5);
+    }
+  }
+}

@@ -3,6 +3,7 @@ import Footer from '../Components/Footer';
 import Card from '../Components/Card';
 import Icon from '../Components/Icon';
 import { CONTACT_POINTS } from '../Services/Data';
+import Recommendations from '../Components/Recommendations';
 
 const Contact = (props) => {
   const renderContactPoints = () => {
@@ -29,7 +30,7 @@ const Contact = (props) => {
   };
 
   return (
-    <main className='page fade'>
+    <main>
       <Introduction
         title='Contact Me.'
         subtitle='You can reach to out me in several ways.'
@@ -48,6 +49,7 @@ const Contact = (props) => {
           </div>
         </Card>
       </div>
+      <Recommendations />
       <Footer />
     </main>
   );

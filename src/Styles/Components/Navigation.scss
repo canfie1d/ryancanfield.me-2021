@@ -29,6 +29,10 @@
     cursor: pointer;
     cursor: url('/Assets/Images/pointer.png') 2 2, pointer;
 
+    &.nav__link--disabled {
+      pointer-events: none;
+    }
+
     &.nav__link--active {
       border: 1px solid $off-white;
 

@@ -9,7 +9,6 @@
     "complete-react-scripts": "4.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-transition-group": "^4.4.1",
     "react-use": "^15.3.8",
     "transition-switch": "1.0.0",
     "react-waypoint": "^9.0.3",

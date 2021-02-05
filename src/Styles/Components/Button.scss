@@ -1,0 +1,47 @@
+.button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @include bodyFontBold($white);
+  background: $secondary;
+  text-decoration: none;
+  border: none;
+  cursor: url('/Assets/Images/pointer.png') 2 2, pointer;
+  box-shadow: 2px 2px 4px rgba($black, 0.2);
+  padding: rem(20);
+  text-transform: uppercase;
+  transition: box-shadow 200ms ease-out, background 200ms ease-out;
+
+  &.button--small {
+    padding: rem(10);
+  }
+
+  &.button--inline {
+    display: inline;
+  }
+
+  &.button--transparent {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &:focus {
+    outline: 1px solid $primary;
+    outline-offset: 1px;
+  }
+
+  &:hover {
+    outline: none;
+    box-shadow: 2px 2px 6px rgba($black, 0.2);
+    background: shade($secondary, 10%);
+  }
+
+  @include min-screen($media-small) {
+    padding: rem(20, 40);
+  }
+
+  &.button--secondary {
+    background: $white;
+    @include bodyFontBold($secondary);
+  }
+}

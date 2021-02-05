@@ -3,9 +3,10 @@ import Introduction from '../Components/Introduction';
 import Footer from '../Components/Footer';
 import ArticleLink from '../Components/ArticleLink';
 import { ARTICLE_LINKS } from '../Services/Data';
+import Recommendations from '../Components/Recommendations';
 
 const Writing = (props) => {
-  const getCardLinks = () => {
+  const renderArticles = () => {
     return ARTICLE_LINKS.map((link, i) => (
       <ArticleLink
         key={i}
@@ -19,7 +20,7 @@ const Writing = (props) => {
   };
 
   return (
-    <main className='page fade'>
+    <main>
       <Introduction
         title='My Writing.'
         subtitle='Organized thoughts on front-end design &amp; development.'
@@ -27,8 +28,9 @@ const Writing = (props) => {
       <div className='content' id='content'>
         <div className='hr' />
         <h3 className='h3'>Selected Medium Articles</h3>
-        <CardList cards={getCardLinks()} />
+        <CardList cards={renderArticles()} clickable />
       </div>
+      <Recommendations />
       <Footer />
     </main>
   );

@@ -1,7 +1,12 @@
 ////////////////////////
 //      Flexbox       //
 ////////////////////////
-@mixin flexContainer($centerContent:false, $wrapContent:true, $inlineFlex:false) {
+@mixin flexContainer(
+  $justifySpread: false,
+  $centerContent: false,
+  $wrapContent: true,
+  $inlineFlex: false
+) {
   display: flex;
   flex-wrap: nowrap;
 
@@ -14,13 +19,21 @@
   }
 
   @if $centerContent == true {
-    justify-content: center;
     align-items: center;
     align-content: center;
   }
+
+  @if $justifySpread == true {
+    justify-content: space-between;
+  }
 }
 
-@mixin flexItem($flexGrow:1, $flexShrink:0, $flexBasis:auto, $flexSelf:auto) {
+@mixin flexItem(
+  $flexGrow: 1,
+  $flexShrink: 0,
+  $flexBasis: auto,
+  $flexSelf: auto
+) {
   flex: $flexGrow $flexShrink $flexBasis;
   align-self: $flexSelf;
 }
@@ -35,14 +48,18 @@
   line-height: $lineHeight;
 
   &::after {
-    content: "";
+    content: '';
     text-align: right;
     position: absolute;
     bottom: 0;
     right: 0;
     width: 50%;
     height: $lineHeight em;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 80%);
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1) 80%
+    );
   }
 
   /* Now add in code for the browsers that support -webkit-line-clamp and overwrite the non-supportive stuff */

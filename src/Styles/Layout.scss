@@ -45,12 +45,22 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 
+  + .content__split {
+    margin-top: rem(160);
+  }
+
   .content__split__column {
     flex: 1 1 100%;
   }
 
+  &.content__split--reverse-small {
+    @include max-screen($media-large) {
+      flex-direction: column-reverse;
+    }
+  }
+
   @include min-screen($media-large) {
-  .content__split__column {
+    .content__split__column {
       flex: 1 1 50%;
 
       &:nth-of-type(odd) {

@@ -28,15 +28,6 @@ body {
   }
 }
 
-.page {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
 .visually-hidden {
   position: absolute !important;
   height: 1px;
@@ -56,6 +47,10 @@ body {
   &.hr--full {
     width: 100%;
     margin: rem(20, 0, 40);
+  }
+
+  &.hr--extra-margin {
+    margin-top: rem(120);
   }
 }
 
@@ -85,22 +80,7 @@ body {
   }
 }
 
-.fade {
-  &.fade-enter {
-    opacity: 0;
-  }
-
-  &.fade-enter.fade-enter-active {
-    opacity: 1;
-    transition: opacity 500ms ease-in 500ms;
-  }
-
-  &.fade-exit {
-    opacity: 1;
-  }
-
-  &.fade-exit.fade-exit-active {
-    opacity: 0;
-    transition: opacity 300ms ease-in;
-  }
+.max-width--100 {
+  max-width: 100%;
+  margin-top: calc(6.25rem + 26px);
 }

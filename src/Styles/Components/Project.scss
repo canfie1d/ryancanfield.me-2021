@@ -1,0 +1,33 @@
+.project {
+  padding: rem(20);
+  margin-bottom: rem(60);
+}
+
+.project__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 0;
+  margin-bottom: rem(10);
+
+  a {
+    color: $primary;
+    font-family: $body-font;
+    font-size: rem(14);
+
+    &:visited {
+      color: $secondary;
+    }
+  }
+}
+
+.project__image {
+  max-width: 100%;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.project__link {
+  margin: rem(20) rem(10) rem(10);
+}

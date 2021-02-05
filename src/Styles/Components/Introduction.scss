@@ -1,9 +1,9 @@
 @keyframes fadeIn {
   0% {
     transform: translateY(10px);
-    opacity: .01;
+    opacity: 0.01;
   }
-  90%{
+  90% {
     transform: translateY(0);
   }
   100% {
@@ -17,7 +17,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
   66% {
     transform: translateY(0);
@@ -26,7 +26,7 @@
     transform: translateY(-10px);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(-40px);
   }
 }
 
@@ -37,11 +37,6 @@
   height: calc(100vh - #{rem(80)});
   padding: rem(20);
   background: $primary-dark;
-
-  &.introduction--hintNeeded {
-    animation: bump 600ms ease;
-    animation-fill-mode: forwards;
-  }
 
   @include min-screen($media-small) {
     height: 100vh;
@@ -67,5 +62,9 @@
     @include min-screen($media-small) {
       max-width: rem(502);
     }
+  }
+
+  .p {
+    margin-bottom: 0;
   }
 }

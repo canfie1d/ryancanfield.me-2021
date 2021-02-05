@@ -1,6 +1,9 @@
 const Footer = (props) => {
   return (
     <footer className='footer'>
+      {props.children && (
+        <div className='footer__content'>{props.children}</div>
+      )}
       <span>
         View the{' '}
         <a

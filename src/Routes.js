@@ -6,6 +6,7 @@ import About from './Routes/About';
 import Writing from './Routes/Writing';
 import Contact from './Routes/Contact';
 import Work from './Routes/Work';
+import CaseStudy from './Routes/CaseStudy';
 import NotFound from './Routes/NotFound';
 
 const Routes = () => {
@@ -14,6 +15,7 @@ const Routes = () => {
       <Route exact path='/' component={About} />
       <Route exact path='/writing' component={Writing} />
       <Route exact path='/work' component={Work} />
+      <Route exact path='/work/:id' component={CaseStudy} />
       <Route exact path='/contact' component={Contact} />
       <Route component={NotFound} />
     </TransitionSwitch>

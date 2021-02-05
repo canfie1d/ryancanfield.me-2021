@@ -51,6 +51,10 @@
   &:not(:last-child) {
     margin-bottom: rem(60);
   }
+
+  &.p--white {
+    color: $white;
+  }
 }
 
 .a {

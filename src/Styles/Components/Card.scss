@@ -1,5 +1,6 @@
 $card-height: rem(250);
 $card-height--small: rem(200);
+$card-height--auto: auto;
 
 .card__list {
   display: flex;
@@ -17,9 +18,12 @@ $card-height--small: rem(200);
 
   > * {
     background: $off-white;
+    box-shadow: 2px 2px 4px rgba($black, 0.1);
+  }
+
+  &.card__item--clickable > * {
     cursor: pointer;
     cursor: url('/Assets/Images/pointer.png') 2 2, pointer;
-    box-shadow: 2px 2px 4px rgba($black, 0.1);
     transition: transform 200ms ease-out, box-shadow 200ms ease-out;
 
     &:hover {
@@ -51,23 +55,25 @@ $card-height--small: rem(200);
     }
   }
 
-  @include min-screen($media-xlarge) {
-    flex: 0 1 33%;
+  &:not(.card__item--two-wide) {
+    @include min-screen($media-xlarge) {
+      flex: 0 1 33%;
 
-    &:not(:only-child) {
-      &:nth-child(3n + 1) {
-        padding-right: rem(66.666);
-        padding-left: 0;
-      }
+      &:not(:only-child) {
+        &:nth-child(3n + 1) {
+          padding-right: rem(66.666);
+          padding-left: 0;
+        }
 
-      &:nth-child(3n + 2) {
-        padding-left: rem(33.333);
-        padding-right: rem(33.333);
-      }
+        &:nth-child(3n + 2) {
+          padding-left: rem(33.333);
+          padding-right: rem(33.333);
+        }
 
-      &:nth-child(3n + 3) {
-        padding-right: 0;
-        padding-left: rem(66.666);
+        &:nth-child(3n + 3) {
+          padding-right: 0;
+          padding-left: rem(66.666);
+        }
       }
     }
   }
@@ -97,6 +103,10 @@ $card-height--small: rem(200);
     border-right-color: tint($tertiary, 30%);
     border-bottom-color: tint($tertiary, 40%);
     border-left-color: tint($tertiary, 50%);
+  }
+
+  &.card__column--auto {
+    height: $card-height--auto;
   }
 }
 
