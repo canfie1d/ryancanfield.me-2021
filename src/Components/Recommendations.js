@@ -63,14 +63,14 @@ const Recommendations = (props) => {
                 onClick={() => updateRecomendation('prev')}
                 className='button button--transparent button--inline button--small'
               >
-                <Icon icon='caret-left' />
+                <Icon name='caret-left' />
                 <span className='visually-hidden'>Previous recommedation</span>
               </button>
               <button
                 onClick={() => updateRecomendation('next')}
                 className='button button--transparent button--inline button--small'
               >
-                <Icon icon='caret-right' />
+                <Icon name='caret-right' />
                 <span className='visually-hidden'>Next recommedation</span>
               </button>
             </div>

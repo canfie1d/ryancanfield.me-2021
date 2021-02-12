@@ -13,7 +13,7 @@ const Icon = (props) => {
     // isMounted is an antipattern but solves the problem for this case
     // https://reactjs.org/blog/2015/12/16/ismounted-antipattern.html
     setIsMounted(true);
-    const iconPath = `./Icons/${props.icon}`;
+    const iconPath = `./Icons/${props.name}`;
     import(/* webpackMode: "eager" */ `${iconPath}`)
       .then((module) => {
         return module.default();
@@ -24,13 +24,13 @@ const Icon = (props) => {
         }
       })
       .catch(() => {
-        console.warn(`ICON NOT FOUND - ${props.icon}`);
+        console.warn(`ICON NOT FOUND - ${props.name}`);
       });
 
     return function cleanup() {
       setIsMounted(false);
     };
-  }, [isMounted, props.icon]);
+  }, [isMounted, props.name]);
 
   const classes = [
     'icon',
@@ -50,7 +50,7 @@ const Icon = (props) => {
 };
 
 Icon.propTypes = {
-  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   size: PropTypes.oneOf(['x-small', 'small', 'large', 'x-large', null]),
   rotate: PropTypes.oneOf([0, 45, 90, 180, 270]),
   color: PropTypes.oneOf([

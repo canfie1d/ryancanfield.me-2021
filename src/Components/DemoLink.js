@@ -1,4 +1,5 @@
 import Icon from '../Components/Icon';
+import ProgressiveImage from '../Components/ProgressiveImage';
 
 const DemoLink = (props) => {
   return (
@@ -9,13 +10,13 @@ const DemoLink = (props) => {
       <div className='demo__link__column'>
         <h3 className='h3 demo__title'>{props.title}</h3>
         <div className='demo__heart-container'>
-          <Icon icon='heart' size='small' color='secondary' />
+          <Icon name='heart' size='small' color='secondary' />
           <span className='demo__heart__quantity'>{props.hearts}</span>
         </div>
       </div>
       <div className='demo__link__column'>
         <div className='demo__image__wrapper'>
-          <img className='demo__image' src={props.image} alt='' />
+          <ProgressiveImage className='demo__image' src={props.image} alt='' />
         </div>
       </div>
     </a>

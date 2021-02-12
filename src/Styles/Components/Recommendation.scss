@@ -1,8 +1,8 @@
 .recommendation {
   width: 100%;
   background: $tertiary;
-  height: 310px;
-  padding: rem(20);
+  height: 350px;
+  padding: rem(40) rem(20);
 
   &.recommendation--auto {
     height: auto;

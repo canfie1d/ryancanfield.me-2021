@@ -25,12 +25,21 @@
     box-shadow: none;
   }
 
+  &.button--invisible {
+    background: transparent;
+    box-shadow: none;
+    text-transform: none;
+    text-align: left;
+    padding: 0;
+    display: block;
+  }
+
   &:focus {
     outline: 1px solid $primary;
     outline-offset: 1px;
   }
 
-  &:hover {
+  &:hover:not(.button--invisible) {
     outline: none;
     box-shadow: 2px 2px 6px rgba($black, 0.2);
     background: shade($secondary, 10%);

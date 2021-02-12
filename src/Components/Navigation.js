@@ -20,7 +20,7 @@ const Navigation = (props) => {
           >
             <Icon
               className='nav__link__icon'
-              icon='about'
+              name='about'
               color='white'
               size='large'
             />
@@ -39,7 +39,7 @@ const Navigation = (props) => {
           >
             <Icon
               className='nav__link__icon'
-              icon='work'
+              name='work'
               color='white'
               size='large'
             />
@@ -58,7 +58,7 @@ const Navigation = (props) => {
           >
             <Icon
               className='nav__link__icon'
-              icon='writing'
+              name='writing'
               color='white'
               size='large'
             />
@@ -77,7 +77,7 @@ const Navigation = (props) => {
           >
             <Icon
               className='nav__link__icon'
-              icon='contact'
+              name='contact'
               color='white'
               size='large'
             />

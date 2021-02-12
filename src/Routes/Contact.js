@@ -20,7 +20,7 @@ const Contact = (props) => {
         return (
           <li key={i} className='contact-card__item'>
             <a className='a' href={contact.url}>
-              <Icon color='primary' size='x-large' icon={contact.icon} />
+              <Icon color='primary' size='x-large' name={contact.icon} />
               <span className='visually-hidden'>{contact.title}</span>
             </a>
           </li>

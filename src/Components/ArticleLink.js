@@ -1,9 +1,11 @@
+import ProgressiveImage from './ProgressiveImage';
+
 const ArticleLink = (props) => {
   return (
     <a href={props.url} className='card__link'>
       <div className='card__row'>
         <div className='card__column'>
-          <img
+          <ProgressiveImage
             src={props.imageUrl}
             className='card__image'
             alt='presentational card'

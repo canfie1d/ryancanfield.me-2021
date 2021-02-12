@@ -55,6 +55,13 @@
   &.p--white {
     color: $white;
   }
+
+  &.p--caption {
+    margin-top: rem(20);
+    font-size: rem(14);
+    font-style: italic;
+    line-height: 1.2;
+  }
 }
 
 .a {
