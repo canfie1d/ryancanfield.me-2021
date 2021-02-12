@@ -464,7 +464,7 @@ export const CASE_STUDIES = [
       images: [
         {
           src:
-            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/FreightWeb/truck-on-mountain-road.jpg',
+            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Ocean/chat_home.png',
         },
       ],
     },
@@ -476,7 +476,7 @@ export const CASE_STUDIES = [
       images: [
         {
           src:
-            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/FreightWeb/truck-on-mountain-road.jpg',
+            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Ocean/chat_home_half.png',
         },
       ],
     },
@@ -488,22 +488,22 @@ export const CASE_STUDIES = [
       images: [
         {
           src:
-            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/FreightWeb/truck-on-mountain-road.jpg',
+            'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Ocean/conversation.png',
         },
       ],
     },
     additionalImages: [
       {
         src:
-          'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/FreightWeb/truck-on-mountain-road.jpg',
+          'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Ocean/full_open_selected_pp.png',
       },
       {
         src:
-          'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/FreightWeb/truck-on-mountain-road.jpg',
+          'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Ocean/messages.png',
       },
       {
         src:
-          'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/FreightWeb/truck-on-mountain-road.jpg',
+          'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Ocean/mini_open_selected.png',
       },
     ],
     videoUrl:
