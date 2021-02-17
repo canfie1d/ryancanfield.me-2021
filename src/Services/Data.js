@@ -302,7 +302,7 @@ export const PROJECTS = [
     link: 'https://ocean.com',
     url: '/work/ocean-compass',
     description:
-      'An aging demographic and a lackluster onboard experience motivated Carnival Cruiselines to reinvigorate their Princess cruiseships in the Carribean.',
+      'An aging demographic and a lackluster onboard experience motivated Carnival Cruiselines to reinvigorate their Princess cruiseships in the Caribbean.',
     image:
       'https://s3-us-west-2.amazonaws.com/ryancanfield.me-images/Ocean/ocean-thumb.png',
   },
@@ -454,7 +454,7 @@ export const CASE_STUDIES = [
   {
     id: 'ocean-compass',
     title: 'Ocean Compass',
-    subtitle: 'A reimagined Princess Carribean cruise experience.',
+    subtitle: 'A reimagined Princess Caribbean cruise experience.',
     link: 'https://ocean.com',
     problem: {
       content: [
@@ -483,7 +483,7 @@ export const CASE_STUDIES = [
     result: {
       content: [
         "The result is familiar and intuitive yet fresh and full of all the features you can expect from another messaging app. Plus it offers other unexpected features such as event and location sharing made possible by the ship's onboard local network.",
-        'Carnival Cruiselines has since integrated Ocean Compass into all of their Carribean Princess cruises under their MedaillionClass service.',
+        'Carnival Cruiselines has since integrated Ocean Compass into all of their Caribbean Princess cruises under their MedaillionClass service.',
       ],
       images: [
         {

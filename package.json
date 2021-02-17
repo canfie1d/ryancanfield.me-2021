@@ -13,7 +13,7 @@
     "react-useportal": "^1.0.13",
     "react-waypoint": "^9.0.3",
     "sass": "^1.32.5",
-    "transition-switch": "1.0.0",
+    "transition-switch": "1.0.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

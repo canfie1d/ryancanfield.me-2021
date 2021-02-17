@@ -11923,10 +11923,10 @@ tr46@^2.0.2:
   dependencies:
     punycode "^2.1.1"
 
-transition-switch@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/transition-switch/-/transition-switch-1.0.0.tgz#66777f2e9bab01b449fb29a0f1400310d864d2c1"
-  integrity sha512-a20vShwXUQ97aaylg+Ni15Qw+kw2tnZx3jmWdDgz8E3EvARQuefLE7Id+fipT+aqrQlS90a1nUtMMHatiMO/gg==
+transition-switch@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/transition-switch/-/transition-switch-1.0.1.tgz#c820bfe158c5ff1303c6b2271198f728798beeb7"
+  integrity sha512-m9l21SY/wLEFL1m4EemLfAHOgtghDNRQKmkCPK3038UNgBZ7GcmjDSXMEP/9zFJYZ7XJQ6ZGa9jAnNviAsYn0Q==
   dependencies:
     animated "^0.2.2"
     prop-types "^15.7.2"

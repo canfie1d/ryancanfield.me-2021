@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { Route } from 'react-router';
 import { TransitionSwitch } from 'transition-switch';
 
@@ -10,8 +11,10 @@ import CaseStudy from './Routes/CaseStudy';
 import NotFound from './Routes/NotFound';
 
 const Routes = () => {
+  const ref = useRef(null);
+
   return (
-    <TransitionSwitch transition='fade-down'>
+    <TransitionSwitch ref={ref} transition='fade-down'>
       <Route exact path='/' component={About} />
       <Route exact path='/writing' component={Writing} />
       <Route exact path='/work' component={Work} />
